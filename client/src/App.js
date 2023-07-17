@@ -13,7 +13,7 @@
           <Routes>
             <Route path='/' element={<Auth />} />
             <Route path='/problem-list' element={<ProblemList />} />
-            <Route path='/problem-statement' element={<ProblemStatement />} />
+            <Route path='/problem-statement/:problemID' element={<ProblemStatement />} />
             <Route path='/submissions' element={<Submissions />} />
           </Routes>
         </Router>

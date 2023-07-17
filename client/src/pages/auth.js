@@ -49,7 +49,6 @@ const LoginForm = () => {
       setCookies("access_token",response.data.token);
       window.localStorage.setItem("userID", response.data.userID);
       navigate("/problem-list");
-      console.log(response);
     } catch (error) {
       console.error(error);
     }
@@ -85,7 +84,6 @@ const RegisterForm = () => {
   const {register, handleSubmit, formState: { errors } } = useForm({ resolver: yupResolver(schema) });
 
   const onSubmit = async (data) => {
-    console.log(data);
     try {
       await axios.post("http://localhost:3001/auth/register",data );
       alert("Registration Complete");
