@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.authWrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: aliceblue;
+}
+
+.authWrapper h1{
+    align-self: center;
+    margin-top: 50px;
+    color:black;
+}
+
+.authCard{
+    margin-top: 100px;
+    width: 325px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    padding: 20px;
+    height: fit-content;
+}
+
+ .authMode{
+    display:flex;
+    flex-direction: row;
+    padding: 5px;
+    padding-bottom: 50px;
+    justify-content: space-around;
+    align-items: center;
+} 
+
+.loginMode:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.signinMode:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.authForm{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 0;
+}
+
+button{
+    margin-top: 20px;
+    padding: 10px;
+    width: fit-content;
+    align-self: end;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+p{
+    margin-bottom: 10px;
+}
