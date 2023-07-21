@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.submissionList{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.listContainer{
+    align-self: center;
+    list-style-type: none;
+    width: 800px;
+    background-color: whitesmoke;
+}
+
+.listHeading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+    padding-left: 25px;
+    padding-right: 25px;
+    border:black solid;
+    border-width: 1px;
+    padding: 8px;
+}
+
+.listsubmissions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border:black solid;
+    border-top: none;
+    border-width: 1px;        
+    font-weight: 400;
+}
+
+.listsubmissions:hover{
+    background-color: white;    
+    font-weight: 600;
+}

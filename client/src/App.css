@@ -1,7 +1,8 @@
 .App{
     margin: 0;
     padding: 0;
-    height: 100vh;
+    min-height: 100vh;
+    max-height: min-content;
     background-color: aliceblue;
     justify-content: center;
     align-content: center;

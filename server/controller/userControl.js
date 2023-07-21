@@ -16,12 +16,12 @@ const userRegisterControl = async (req, res) => {
     if (user) {
       console.log("User already exist!");
       return res.json({
-        message: `User with user name ${userName} already exists!`,
+        error: `User with user name ${userName} already exists!`,
       });
     } else if (user1) {
       console.log("User already exist!");
       return res.json({
-        message: `User with email ${userEmail} already exists!`,
+        error: `User with email ${userEmail} already exists!`,
       });
     }
 
@@ -33,9 +33,9 @@ const userRegisterControl = async (req, res) => {
       userEmail,
     });
     await newUser.save();
-
-    res.json({ message: "User Registered Successfully!!" });
     console.log("User Registered Successfully!!");
+
+    return res.json({ message: "User Registered Successfully!!" });
   } catch (error) {
     console.log("Error Finding User", error.message);
   }
@@ -51,7 +51,7 @@ const userLoginControl = async (req, res) => {
     if (!user) {
       console.log(`User:${userName} does't exist!`);
       return res.json({
-        message: `User with user name ${userName} doesnot exist!`,
+        error: `User with user name ${userName} doesnot exist!`,
       });
     }
 
@@ -60,15 +60,15 @@ const userLoginControl = async (req, res) => {
 
     if(!passwordValid)
     {
-      res.json({message: "Password doesn't match. Recheck User Name and Password"});
       console.log("password or user name doesn't match");
+      return res.json({error: "Password doesn't match. Recheck User Name and Password"});
     }
 
     // create jwt token
     const token = jwt.sign({id: user._id},process.env.JWT_SECRET);
 
-    res.json({token, userID: user._id});
     console.log("User LogedIn Successfully!!");
+    return res.json({token, userID: user._id});
   } catch (error) {
     console.log("Error Finding User", error.message);
   }
