@@ -1,4 +1,3 @@
-import { NavBar } from "../components/navbar";
 import axios from "axios";
 import { useEffect, useState, useRef } from "react";
 import "./problemStatement.css";
@@ -12,7 +11,6 @@ const ProblemStatement = () => {
   let { problemID } = useParams();
   const navigate = useNavigate();
   const userID = useGetUserID();
-  console.log(userID);
 
   useEffect(() => {
     const fetctProblem = async () => {
@@ -36,7 +34,8 @@ const ProblemStatement = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    if (userID === undefined) {
+    if (userID === undefined || userID === null) {
+      console.log("User Not LogedIn")
       alert("please login");
     } else {
       const formdata = new FormData();
@@ -62,7 +61,6 @@ const ProblemStatement = () => {
 
   return (
     <>
-      <NavBar />
       <div className="Problem">
         <h2 className="ProblemName"> {problem?.problemName} </h2>
         <div className="ProblemStatement">

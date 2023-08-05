@@ -1,4 +1,3 @@
-import { NavBar } from "../components/navbar";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./submissions.css";
@@ -21,9 +20,8 @@ const Submissions = () => {
 
   return (
     <>
-      <NavBar />
       <div className="submissionList">
-        <div className="listContainer">
+        <div className="submissionlistContainer">
           <div className="listHeading">
             <h4>User Name</h4>
             <h4>Problem Name</h4>

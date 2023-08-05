@@ -1,4 +1,3 @@
-import { NavBar } from "../components/navbar";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -27,7 +26,6 @@ export const ProblemList = () => {
 
   return (
     <>
-      <NavBar />
       <div className="problemList">
         <h2>Happy Coding :)</h2>
         <div className="listContainer">

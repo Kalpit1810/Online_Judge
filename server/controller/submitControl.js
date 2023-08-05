@@ -94,13 +94,16 @@ const generateVerdict = async (fileName, problemID) => {
 
       if (normalizeLineEndings(userOutput.trimEnd()) === normalizeLineEndings(doc.TCOutput.trimEnd())) {
         verdict++;
+        console.log("Passed");
+      }
+      else{
+        console.log("Failed");
       }
     }
   } catch (error) {
     console.log("ERROR!!!!!!!!!!", error.message);
+    return verdict = "Error";
   }
-
-  console.log(verdict);
 
   return verdict === testcases.length ? "Accepted" : "Wrong Answer";
 };

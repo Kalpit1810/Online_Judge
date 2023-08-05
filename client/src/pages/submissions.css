@@ -10,7 +10,7 @@
     height: 100%;
 }
 
-.listContainer{
+.submissionlistContainer{
     align-self: center;
     list-style-type: none;
     width: 800px;
@@ -31,7 +31,7 @@
 .listsubmissions{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:space-between;
     padding: 10px;
     padding-left: 25px;
     padding-right: 25px;
